@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScriptの学習</title>
+</head>
+<body>
+  <p>JavaScriptの学習 / 総合課題9_1</p>
+  <!-- 下記に課題を書く -->
+  <div class="border all">
+  <p class="parentResult border" id="parentResult">"WIN"."LOSE"を表示</p>
+  <h1 class="parent border">親</h1>
+  <h1 id="parentRole" class="parentRole border">親の役名表示</h1>
+  <div class="tranp" id="tranpParent">
+    <img class="card" src='images/0_0.png'>
+    <img class="card" src="images/0_0.png">
+    <img class="card" src="images/0_0.png">
+    <img class="card" src="images/0_0.png">
+    <img class="card" src="images/0_0.png">
+  </div>
+  <form>
+    <div class="button"><input type="button" id="start" value="ゲームスタート"></div>
+  </form>
+  <h1 id="childRole" class="childRole border" id="childRole">子の役名表示</h1>
+  <div class="tranp" id="tranpChild">
+    <img class="card" src="images/0_0.png">
+    <img class="card" src="images/0_0.png">
+    <img class="card" src="images/0_0.png">
+    <img class="card" src="images/0_0.png">
+    <img class="card" src="images/0_0.png">
+  </div>
+  <p class="childResult border" id="childResult">"WIN"."LOSE"を表示</p>
+  <h1 class="child border">子</h1>
+  </div>
+  <style>
+    html{
+      max-width: 710px;
+      margin:0 auto;
+    }
+    .border{
+      border-collapse: collapse;
+      border: 1px solid;
+    }
+    .parentResult,.childResult,.parent,.child,.parentRole,.button{
+      text-align: center;
+    }
+    .childRole,.parentRole{
+      text-align: center;
+      margin: 0 3%;
+    }
+    .parentRole,#start{
+      clear: both;
+    }
+    .parentResult,.childResult{
+      width: 30%;
+      height: 50px;
+      overflow-wrap: break-word;
+      padding: 20px 10px 0 10px;
+    }
+    .parentResult{
+      float: left;
+      margin: 3% 0 0 3%;
+
+    }
+    .childResult{
+      clear: left;
+      float: right;
+      margin: 0 3% 3% 0;
+    }
+    .parent,.child{
+      width: 15%;
+      height: 50px;
+      padding: 10px 0;
+    }
+    .parent{
+      margin: 3% 0 3% 42%;
+    }
+    .child{
+      margin: 0 6% 0 0;
+      float: right;
+    }
+    .tranp > img{
+      width: 14%;
+      height: 14%;
+      float: left;
+      margin: 3% 3%;
+    }
+    .tranp > img:nth-child(5n){
+      margin-right: 0;
+    }
+    .button{
+      margin-bottom: 3%;
+    }
+    .all{
+      overflow: hidden;
+    }
+  </style>
+  <script src="js/task_comprehensive_9_1.js"></script><!--//フォルダ名jsの中のtask_comprehensive_9_1.jsというファイルを読み込む-->
+</body>
+</html>
